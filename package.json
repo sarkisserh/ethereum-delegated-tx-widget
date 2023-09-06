@@ -1,0 +1,71 @@
+{
+  "name": "ethereum-delegated-tx-widget",
+  "version": "1.0.0",
+  "private": true,
+  "author": "ZitRo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZitRos/ethereum-delegated-tx-widget.git"
+  },
+  "homepage-dreamteam": "https://zitros.github.io/ethereum-delegated-tx-widget",
+  "homepage": "https://send-token.dreamteam.gg",
+  "bugs": {
+    "url": "https://github.com/ZitRos/ethereum-delegated-tx-widget/issues"
+  },
+  "keywords": [
+    "Ethereum",
+    "delegated",
+    "transactions",
+    "pay",
+    "fee",
+    "in",
+    "tokens",
+    "instead",
+    "of",
+    "ether"
+  ],
+  "dependencies": {
+    "ethers": "^4.0.33",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.3",
+    "qs": "^6.8.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-input-autosize": "^2.2.1",
+    "react-scripts": "3.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix",
+    "predeploy": "yarn build",
+    "deploy": "npm run build && gh-pages -d build",
+    "deploy-dreamteam": "echo 'Make sure to replace homepage with homepage-dreamteam manually in package.json' && npm run build && printf \"send-token.dreamteam.gg\" > build/CNAME && gh-pages -d build --repo https://github.com/dreamteam-gg/ethereum-delegated-tx-widget.git"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
+  }
+}
